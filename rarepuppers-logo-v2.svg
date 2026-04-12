@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+
+  <!-- Circle background -->
+  <circle cx="200" cy="200" r="200" fill="#1C1814"/>
+
+  <!-- Toe beans -->
+  <ellipse cx="118" cy="152" rx="36" ry="32" fill="#D85A30"/>
+  <ellipse cx="173" cy="110" rx="36" ry="32" fill="#D85A30"/>
+  <ellipse cx="227" cy="110" rx="36" ry="32" fill="#D85A30"/>
+  <ellipse cx="282" cy="152" rx="36" ry="32" fill="#D85A30"/>
+
+  <!-- Central pad -->
+  <ellipse cx="200" cy="255" rx="82" ry="74" fill="#D85A30"/>
+
+  <!-- Letter R -->
+  <text x="185" y="268" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#FBF7F0" letter-spacing="-1">R</text>
+
+  <!-- Dog face — tiny, sits top-right of the R -->
+  <!-- Head -->
+  <circle cx="232" cy="228" r="14" fill="#FBF7F0"/>
+  <!-- Ears (floppy) -->
+  <ellipse cx="222" cy="220" rx="7" ry="10" fill="#F3C89A" transform="rotate(-15 222 220)"/>
+  <ellipse cx="242" cy="220" rx="7" ry="10" fill="#F3C89A" transform="rotate(15 242 220)"/>
+  <!-- Eyes -->
+  <circle cx="227" cy="226" r="2.2" fill="#1C1814"/>
+  <circle cx="237" cy="226" r="2.2" fill="#1C1814"/>
+  <!-- Nose -->
+  <ellipse cx="232" cy="232" rx="3" ry="2" fill="#1C1814"/>
+  <!-- Mouth -->
+  <path d="M229 234 Q232 237 235 234" fill="none" stroke="#1C1814" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Eye shine -->
+  <circle cx="228" cy="225" r="0.8" fill="#FBF7F0"/>
+  <circle cx="238" cy="225" r="0.8" fill="#FBF7F0"/>
+
+</svg>
