@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rare Puppers Co. — Apps & Games with Heart</title>
 <meta name="description" content="Rare Puppers Co. is an indie studio building wholesome apps and games. Home of PawsitiveDose — your daily dose of feel-good animal moments.">
+<meta name="theme-color" content="#FBF7F0">
+<link rel="canonical" href="https://rarepuppers.github.io/">
 
 <!-- Favicon — shows in browser tabs and bookmarks -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='200' fill='%231C1814'/%3E%3Cellipse cx='118' cy='152' rx='36' ry='32' fill='%23D85A30'/%3E%3Cellipse cx='173' cy='110' rx='36' ry='32' fill='%23D85A30'/%3E%3Cellipse cx='227' cy='110' rx='36' ry='32' fill='%23D85A30'/%3E%3Cellipse cx='282' cy='152' rx='36' ry='32' fill='%23D85A30'/%3E%3Cellipse cx='200' cy='255' rx='82' ry='74' fill='%23D85A30'/%3E%3Ctext x='185' y='268' font-family='Georgia,serif' font-size='52' font-weight='700' fill='%23FBF7F0'%3ER%3C/text%3E%3C/svg%3E">
@@ -15,6 +17,7 @@
 <meta property="og:title" content="Rare Puppers Co. — Apps & Games with Heart">
 <meta property="og:description" content="Indie studio building wholesome apps and games. Home of PawsitiveDose — your daily dose of feel-good animal moments.">
 <meta property="og:image" content="https://rarepuppers.github.io/rarepuppers-logo-v2.png">
+<meta property="og:image:alt" content="Rare Puppers Co. paw logo on a dark background.">
 <meta property="og:url" content="https://rarepuppers.github.io">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rare Puppers Co.">
@@ -25,10 +28,27 @@
 <meta name="twitter:title" content="Rare Puppers Co. — Apps & Games with Heart">
 <meta name="twitter:description" content="Indie studio building wholesome apps and games. Home of PawsitiveDose — your daily dose of feel-good animal moments.">
 <meta name="twitter:image" content="https://rarepuppers.github.io/rarepuppers-logo-v2.png">
+<meta name="twitter:image:alt" content="Rare Puppers Co. paw logo on a dark background.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Rare Puppers Co.",
+  "url": "https://rarepuppers.github.io/",
+  "logo": "https://rarepuppers.github.io/rarepuppers-logo-v2.png",
+  "description": "Rare Puppers Co. is an indie studio building wholesome apps and games.",
+  "sameAs": [
+    "https://github.com/Rarepuppers/pawse",
+    "https://x.com/rarepuppers",
+    "https://reddit.com/user/rarepuppersco",
+    "https://reddit.com/r/rarepuppers"
+  ]
+}
+</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -96,6 +116,21 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--coral); }
+  .logo:focus-visible,
+  .nav-links a:focus-visible,
+  .btn-primary:focus-visible,
+  .btn-outline:focus-visible,
+  .social-btn:focus-visible,
+  .footer-links a:focus-visible,
+  .newsletter-form input:focus-visible,
+  .newsletter-form button:focus-visible,
+  .form-group input:focus-visible,
+  .form-group textarea:focus-visible,
+  .form-group select:focus-visible,
+  .form-submit:focus-visible {
+    outline: 3px solid rgba(29, 158, 117, 0.28);
+    outline-offset: 3px;
+  }
 
   .nav-cta {
     background: var(--coral); color: #fff !important;
@@ -432,7 +467,8 @@
   }
 
   .form-group input:focus,
-  .form-group textarea:focus {
+  .form-group textarea:focus,
+  .form-group select:focus {
     border-color: var(--teal);
   }
 
@@ -489,6 +525,17 @@
     cursor: pointer; transition: opacity 0.15s;
   }
   .newsletter-form button:hover { opacity: 0.85; }
+  .newsletter-form input:disabled,
+  .newsletter-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  .newsletter-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.78);
+    margin-top: 12px;
+  }
 
   /* ── FOOTER ── */
   footer {
@@ -551,14 +598,33 @@
 
   /* ── MOBILE ── */
   @media (max-width: 700px) {
-    nav { padding: 14px 20px; }
-    .nav-links { display: none; }
+    nav {
+      padding: 14px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
     section { padding: 60px 20px; }
     #about { flex-direction: column; }
     .project-featured { grid-template-columns: 1fr; }
     .project-visual { min-height: 220px; }
     footer { flex-direction: column; text-align: center; }
     .footer-links { justify-content: center; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 </style>
 </head>
@@ -770,7 +836,7 @@
 <!-- NEWSLETTER -->
 <div class="newsletter-strip">
   <h3>Stay in the loop</h3>
-  <p>Get notified when we launch new apps, games, and updates. No spam, just good vibes.</p>
+  <p>Get notified when we launch new apps, games, and updates. Mailing list signup is coming soon.</p>
   <!-- NEWSLETTER FORM — currently shows a confirmation message but does NOT save emails.
        To wire this up when ready:
        1. Sign up at mailchimp.com (free up to 500 contacts)
@@ -782,10 +848,11 @@
        5. Rename the email input to: name="EMAIL"
        6. Remove the handleNewsletter() JS function at the bottom of the file
   -->
-  <form class="newsletter-form" onsubmit="handleNewsletter(event)">
-    <input type="email" placeholder="your@email.com" required>
-    <button type="submit">Subscribe</button>
+  <form class="newsletter-form">
+    <input type="email" placeholder="your@email.com" aria-label="Email address" disabled>
+    <button type="button" disabled>Coming soon</button>
   </form>
+  <p class="newsletter-note">Newsletter signup will go live once the app launch details are finalized.</p>
 </div>
 
 <!-- CONTACT -->
@@ -860,26 +927,23 @@
 
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  reveals.forEach(el => observer.observe(el));
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    reveals.forEach(el => el.classList.add('visible'));
+  } else {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+  }
 
   // Stagger child reveals in grids
   document.querySelectorAll('.upcoming-grid .reveal, .about-facts .fact-card').forEach((el, i) => {
     el.style.transitionDelay = (i * 0.08) + 's';
   });
-
-  // Newsletter stub
-  function handleNewsletter(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('button');
-    btn.textContent = 'You\'re in! 🐾';
-    btn.disabled = true;
-    // TODO: wire to Mailchimp embed URL
-  }
 </script>
 </body>
 </html>
