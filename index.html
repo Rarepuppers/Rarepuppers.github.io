@@ -76,7 +76,9 @@
 
   body {
     font-family: var(--sans);
-    background: var(--cream);
+    background:
+      radial-gradient(circle at top, rgba(29,158,117,0.05), transparent 32%),
+      linear-gradient(180deg, #FCF9F4 0%, var(--cream) 30%, #F8F2E8 100%);
     color: var(--ink);
     font-size: 16px;
     line-height: 1.6;
@@ -91,6 +93,7 @@
     background: rgba(251,247,240,0.92);
     backdrop-filter: blur(12px);
     border-bottom: 0.5px solid var(--border);
+    box-shadow: 0 10px 30px rgba(28,24,20,0.05);
   }
 
   .logo {
@@ -150,6 +153,11 @@
     position: relative; overflow: hidden;
   }
 
+  .hero > * {
+    position: relative;
+    z-index: 1;
+  }
+
   /* Decorative paw prints background */
   .hero::before {
     content: '';
@@ -193,6 +201,11 @@
     animation: fadeUp 0.6s 0.2s ease both;
   }
 
+  .hero-sub strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
   .hero-btns {
     display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
     animation: fadeUp 0.6s 0.3s ease both;
@@ -216,7 +229,11 @@
     cursor: pointer; transition: background 0.15s, transform 0.15s;
     display: inline-flex; align-items: center; gap: 8px;
   }
-  .btn-outline:hover { background: var(--cream2); transform: translateY(-1px); }
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.72);
+    border-color: rgba(28,24,20,0.18);
+    transform: translateY(-1px);
+  }
 
   .hero-scroll {
     position: absolute; bottom: 32px;
@@ -259,6 +276,7 @@
     background: var(--cream2);
     border-radius: 20px; border: 1px solid var(--border);
     overflow: hidden;
+    box-shadow: 0 24px 60px rgba(28,24,20,0.08);
   }
 
   .project-info { padding: 48px; }
@@ -327,6 +345,7 @@
     display: flex; flex-direction: column;
     align-items: center; padding: 20px 14px;
     gap: 12px; position: relative; z-index: 1;
+    box-shadow: 0 24px 50px rgba(0,0,0,0.18);
   }
 
   .phone-notch {
@@ -368,9 +387,14 @@
     border: 0.5px solid rgba(255,255,255,0.1);
     border-radius: var(--radius);
     padding: 28px;
-    transition: background 0.2s;
+    min-height: 100%;
+    transition: background 0.2s, transform 0.2s, border-color 0.2s;
   }
-  .upcoming-card:hover { background: rgba(255,255,255,0.08); }
+  .upcoming-card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.18);
+    transform: translateY(-3px);
+  }
 
   .upcoming-card .card-type {
     font-size: 11px; font-weight: 500;
@@ -414,6 +438,7 @@
     border: 0.5px solid var(--border);
     border-radius: var(--radius-sm);
     padding: 20px;
+    box-shadow: 0 14px 30px rgba(28,24,20,0.05);
   }
 
   .fact-number {
@@ -445,6 +470,7 @@
     background: var(--cream2);
     border: 0.5px solid var(--border);
     border-radius: 20px; padding: 40px;
+    box-shadow: 0 24px 60px rgba(28,24,20,0.07);
   }
 
   .form-group { margin-bottom: 16px; text-align: left; }
@@ -491,8 +517,15 @@
 
   /* ── NEWSLETTER ── */
   .newsletter-strip {
-    background: var(--teal);
+    background:
+      radial-gradient(circle at top, rgba(255,255,255,0.12), transparent 45%),
+      linear-gradient(135deg, #1D9E75 0%, #15795B 100%);
     padding: 40px; text-align: center;
+  }
+
+  .newsletter-inner {
+    max-width: 620px;
+    margin: 0 auto;
   }
 
   .newsletter-strip h3 {
@@ -572,11 +605,15 @@
     display: inline-flex; align-items: center; gap: 6px;
     padding: 8px 16px; border-radius: 20px;
     font-size: 13px; font-weight: 500;
-    text-decoration: none; transition: opacity 0.15s;
+    text-decoration: none; transition: opacity 0.15s, transform 0.15s, border-color 0.15s;
     border: 1px solid var(--border); color: var(--ink2);
     background: var(--cream);
   }
-  .social-btn:hover { opacity: 0.75; }
+  .social-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+    border-color: rgba(28,24,20,0.2);
+  }
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
@@ -613,7 +650,10 @@
     section { padding: 60px 20px; }
     #about { flex-direction: column; }
     .project-featured { grid-template-columns: 1fr; }
+    .project-info { padding: 32px 24px; }
     .project-visual { min-height: 220px; }
+    .contact-card { padding: 28px 22px; }
+    .newsletter-strip { padding: 32px 20px; }
     footer { flex-direction: column; text-align: center; }
     .footer-links { justify-content: center; }
   }
@@ -835,6 +875,7 @@
 
 <!-- NEWSLETTER -->
 <div class="newsletter-strip">
+  <div class="newsletter-inner">
   <h3>Stay in the loop</h3>
   <p>Get notified when we launch new apps, games, and updates. Mailing list signup is coming soon.</p>
   <!-- NEWSLETTER FORM — currently shows a confirmation message but does NOT save emails.
@@ -853,6 +894,7 @@
     <button type="button" disabled>Coming soon</button>
   </form>
   <p class="newsletter-note">Newsletter signup will go live once the app launch details are finalized.</p>
+  </div>
 </div>
 
 <!-- CONTACT -->
