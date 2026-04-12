@@ -211,6 +211,24 @@
     animation: fadeUp 0.6s 0.3s ease both;
   }
 
+  .mini-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+
+  .mini-links a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.82);
+    text-decoration: none;
+  }
+
+  .mini-links a:hover {
+    color: #fff;
+  }
+
   .btn-primary {
     background: var(--ink); color: #fff;
     padding: 14px 28px; border-radius: 30px;
@@ -326,6 +344,7 @@
     background: linear-gradient(145deg, #1D9E75 0%, #0F6E56 100%);
     display: flex; align-items: center; justify-content: center;
     min-height: 360px; position: relative; overflow: hidden;
+    padding: 28px;
   }
 
   .project-visual::before {
@@ -337,39 +356,62 @@
     );
   }
 
-  .phone-mockup {
-    width: 160px; height: 280px;
-    background: rgba(255,255,255,0.12);
-    border-radius: 24px;
-    border: 2px solid rgba(255,255,255,0.2);
-    display: flex; flex-direction: column;
-    align-items: center; padding: 20px 14px;
-    gap: 12px; position: relative; z-index: 1;
-    box-shadow: 0 24px 50px rgba(0,0,0,0.18);
+  .screens-showcase {
+    position: relative;
+    width: min(100%, 420px);
+    height: 400px;
+    z-index: 1;
   }
 
-  .phone-notch {
-    width: 48px; height: 6px; background: rgba(255,255,255,0.3);
-    border-radius: 3px;
+  .screen-card {
+    position: absolute;
+    width: 190px;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 4px solid rgba(255,255,255,0.9);
+    box-shadow: 0 26px 60px rgba(0,0,0,0.24);
+    background: rgba(255,255,255,0.3);
+    transition: transform 0.2s ease;
   }
 
-  .phone-screen-content {
-    display: flex; flex-direction: column; align-items: center;
-    gap: 8px; width: 100%;
+  .screen-card img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
-  .phone-img-placeholder {
-    width: 100%; height: 100px; border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 36px;
+  .screen-main {
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    z-index: 3;
   }
 
-  .phone-text-line {
-    height: 8px; background: rgba(255,255,255,0.2);
-    border-radius: 4px; width: 100%;
+  .screen-left {
+    left: 4px;
+    bottom: 18px;
+    transform: rotate(-10deg);
+    z-index: 2;
   }
-  .phone-text-line.short { width: 65%; }
+
+  .screen-right {
+    right: 4px;
+    bottom: 18px;
+    transform: rotate(10deg);
+    z-index: 1;
+  }
+
+  .screens-showcase:hover .screen-left {
+    transform: rotate(-13deg) translateY(-4px);
+  }
+
+  .screens-showcase:hover .screen-right {
+    transform: rotate(13deg) translateY(-4px);
+  }
+
+  .screens-showcase:hover .screen-main {
+    transform: translateX(-50%) translateY(-6px);
+  }
 
   /* ── UPCOMING ── */
   #upcoming { background: var(--ink); color: #fff; }
@@ -651,7 +693,14 @@
     #about { flex-direction: column; }
     .project-featured { grid-template-columns: 1fr; }
     .project-info { padding: 32px 24px; }
-    .project-visual { min-height: 220px; }
+    .project-visual { min-height: 320px; padding: 20px; }
+    .screens-showcase {
+      width: min(100%, 320px);
+      height: 280px;
+    }
+    .screen-card { width: 128px; border-radius: 20px; }
+    .screen-left { left: 0; }
+    .screen-right { right: 0; }
     .contact-card { padding: 28px 22px; }
     .newsletter-strip { padding: 32px 20px; }
     footer { flex-direction: column; text-align: center; }
@@ -760,14 +809,15 @@
       </div>
 
       <div class="project-visual">
-        <div class="phone-mockup">
-          <div class="phone-notch"></div>
-          <div class="phone-screen-content">
-            <div class="phone-img-placeholder">🐶</div>
-            <div class="phone-text-line"></div>
-            <div class="phone-text-line short"></div>
-            <div class="phone-text-line"></div>
-            <div class="phone-text-line short" style="width:40%;"></div>
+        <div class="screens-showcase" aria-label="PawsitiveDose app screenshots">
+          <div class="screen-card screen-left">
+            <img src="Screenshot_archive.png" alt="PawsitiveDose archive screen showing saved animal quote cards." loading="lazy">
+          </div>
+          <div class="screen-card screen-right">
+            <img src="Screenshot_settings.png" alt="PawsitiveDose settings screen showing support and badge options." loading="lazy">
+          </div>
+          <div class="screen-card screen-main">
+            <img src="Screenshot_today.png" alt="PawsitiveDose today screen with a featured animal image and reaction buttons." loading="lazy">
           </div>
         </div>
       </div>
@@ -876,24 +926,28 @@
 <!-- NEWSLETTER -->
 <div class="newsletter-strip">
   <div class="newsletter-inner">
-  <h3>Stay in the loop</h3>
-  <p>Get notified when we launch new apps, games, and updates. Mailing list signup is coming soon.</p>
-  <!-- NEWSLETTER FORM — currently shows a confirmation message but does NOT save emails.
-       To wire this up when ready:
-       1. Sign up at mailchimp.com (free up to 500 contacts)
-       2. Create an Audience, then go to Audience > Signup forms > Embedded forms
-       3. Copy the form action URL from the Mailchimp embed code (looks like:
-          https://xxxx.us1.list-manage.com/subscribe/post?u=xxx&id=xxx)
-       4. Replace the onsubmit="handleNewsletter(event)" below with:
-          action="YOUR_MAILCHIMP_URL" method="POST" target="_blank" rel="noopener noreferrer"
-       5. Rename the email input to: name="EMAIL"
-       6. Remove the handleNewsletter() JS function at the bottom of the file
-  -->
-  <form class="newsletter-form">
-    <input type="email" placeholder="your@email.com" aria-label="Email address" disabled>
-    <button type="button" disabled>Coming soon</button>
-  </form>
-  <p class="newsletter-note">Newsletter signup will go live once the app launch details are finalized.</p>
+    <h3>Stay in the loop</h3>
+    <p>Get notified when we launch new apps, games, and updates. Mailing list signup is coming soon.</p>
+    <!-- NEWSLETTER FORM — currently shows a confirmation message but does NOT save emails.
+         To wire this up when ready:
+         1. Sign up at mailchimp.com (free up to 500 contacts)
+         2. Create an Audience, then go to Audience > Signup forms > Embedded forms
+         3. Copy the form action URL from the Mailchimp embed code (looks like:
+            https://xxxx.us1.list-manage.com/subscribe/post?u=xxx&id=xxx)
+         4. Replace the onsubmit="handleNewsletter(event)" below with:
+            action="YOUR_MAILCHIMP_URL" method="POST" target="_blank" rel="noopener noreferrer"
+         5. Rename the email input to: name="EMAIL"
+         6. Remove the handleNewsletter() JS function at the bottom of the file
+    -->
+    <form class="newsletter-form">
+      <input type="email" placeholder="your@email.com" aria-label="Email address" disabled>
+      <button type="button" disabled>Coming soon</button>
+    </form>
+    <p class="newsletter-note">Newsletter signup will go live once the app launch details are finalized.</p>
+    <div class="mini-links">
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
 </div>
 

@@ -12,6 +12,7 @@
 <meta property="og:title" content="Pawsitive Dose Privacy Policy | Rare Puppers Co.">
 <meta property="og:description" content="Privacy Policy for Pawsitive Dose by Rare Puppers Co.">
 <meta property="og:image" content="https://rarepuppers.github.io/rarepuppers-logo-v2.png">
+<meta property="og:image:alt" content="Rare Puppers Co. paw logo on a dark background.">
 <meta property="og:url" content="https://rarepuppers.github.io/privacy/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rare Puppers Co.">
@@ -19,6 +20,7 @@
 <meta name="twitter:title" content="Pawsitive Dose Privacy Policy | Rare Puppers Co.">
 <meta name="twitter:description" content="Privacy Policy for Pawsitive Dose by Rare Puppers Co.">
 <meta name="twitter:image" content="https://rarepuppers.github.io/rarepuppers-logo-v2.png">
+<meta name="twitter:image:alt" content="Rare Puppers Co. paw logo on a dark background.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -69,6 +71,13 @@
     padding: 18px 0 10px;
   }
 
+  .site-links {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
   .brand {
     display: inline-flex;
     align-items: center;
@@ -89,6 +98,10 @@
     text-decoration: none;
     color: var(--ink2);
     font-size: 0.95rem;
+  }
+
+  .back-link:hover {
+    color: var(--coral);
   }
 
   .hero {
@@ -180,15 +193,54 @@
     font-size: 0.95rem;
   }
 
+  .policy-footer {
+    margin-top: 24px;
+    padding: 22px 0 10px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .policy-footer .footer-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .policy-footer .footer-links a {
+    text-decoration: none;
+    color: var(--ink2);
+    font-size: 0.95rem;
+  }
+
+  .policy-footer .footer-links a:hover {
+    color: var(--coral);
+  }
+
+  .footer-copy {
+    color: var(--ink2);
+    font-size: 0.92rem;
+  }
+
   @media (max-width: 720px) {
     .shell { padding: 18px; }
     .topbar {
       flex-direction: column;
       align-items: flex-start;
     }
+    .site-links {
+      width: 100%;
+    }
     .card {
       padding: 22px;
       border-radius: 22px;
+    }
+    .policy-footer {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 </style>
@@ -200,7 +252,10 @@
         <img src="../rarepuppers-logo-v2.png" alt="Rare Puppers Co. logo">
         <span>Rare Puppers Co.</span>
       </a>
-      <a class="back-link" href="../">Back to homepage</a>
+      <nav class="site-links" aria-label="Site links">
+        <a class="back-link" href="../">Home</a>
+        <a class="back-link" href="../#contact">Contact</a>
+      </nav>
     </header>
 
     <section class="hero">
@@ -294,6 +349,15 @@
         </section>
       </div>
       <p class="footer-note">If app features change materially, especially around backend accounts, analytics, payments, or notifications, this policy should be reviewed and updated before store resubmission.</p>
+      <footer class="policy-footer">
+        <div class="footer-links">
+          <a href="../">Home</a>
+          <a href="../#projects">Projects</a>
+          <a href="../#about">About</a>
+          <a href="../#contact">Contact</a>
+        </div>
+        <p class="footer-copy">© 2026 Rare Puppers Co.</p>
+      </footer>
     </main>
   </div>
 </body>
