@@ -401,17 +401,11 @@
     z-index: 1;
   }
 
-  .screens-showcase:hover .screen-left {
-    transform: rotate(-13deg) translateY(-4px);
-  }
+.screen-card { transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), z-index 0s, box-shadow 0.28s ease; }
 
-  .screens-showcase:hover .screen-right {
-    transform: rotate(13deg) translateY(-4px);
-  }
-
-  .screens-showcase:hover .screen-main {
-    transform: translateX(-50%) translateY(-6px);
-  }
+.screen-left:hover  { transform: rotate(-2deg) translateY(-24px) scale(1.05); z-index: 10; box-shadow: 0 24px 48px rgba(0,0,0,0.28); }
+.screen-main:hover  { transform: translateX(-50%) translateY(-24px) scale(1.05); z-index: 10; box-shadow: 0 24px 48px rgba(0,0,0,0.28); }
+.screen-right:hover { transform: rotate(2deg) translateY(-24px) scale(1.05); z-index: 10; box-shadow: 0 24px 48px rgba(0,0,0,0.28); }
 
   /* ── UPCOMING ── */
   #upcoming { background: var(--ink); color: #fff; }
