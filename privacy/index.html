@@ -304,6 +304,11 @@
         </section>
 
         <section class="policy-section">
+          <h2>This website</h2>
+          <p>This website (rarepuppers.github.io) uses Cloudflare Web Analytics, a privacy-friendly, cookieless analytics tool. It does not use cookies, does not fingerprint visitors, and does not collect personal information — only aggregate, anonymous traffic data. The website also offers an optional “Buy me a coffee” tip link that opens a payment page hosted by Stripe; any payment details you enter are handled directly by Stripe under its own terms and privacy policy and are never received or stored by this website.</p>
+        </section>
+
+        <section class="policy-section">
           <h2>Sharing and disclosure</h2>
           <p>Rare Puppers Co. does not sell your personal information. Information may be shared only when needed to operate the app or comply with legal obligations, including with platform providers, hosting providers, push-notification services, analytics providers, or payment processors used to support app functionality.</p>
         </section>
@@ -356,9 +361,14 @@
           <a href="../#about">About</a>
           <a href="../#contact">Contact</a>
         </div>
-        <p class="footer-copy">© 2026 Rare Puppers Co.</p>
+        <p class="footer-copy">© <span id="priv-year"></span> Rare Puppers Co.<br><span style="opacity:0.85;">A SnackPack Studios project · SnackPack Universe · ABN 51 918 351 341</span></p>
+  <script>document.getElementById("priv-year").textContent=new Date().getFullYear();</script>
       </footer>
     </main>
   </div>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "326c9a9f14684e658e111de9ad744f20"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>
