@@ -275,32 +275,57 @@
         <section class="policy-section">
           <h2>Information the app handles</h2>
           <ul>
-            <li>Email address you enter for local sign-in and profile restoration.</li>
-            <li>App preferences and profile-style data such as selected theme, badge choice, donation placeholder totals, archive unlock state, newsletter preference, bookmarks, and interaction counts.</li>
-            <li>Notification settings and device push token if you enable notifications.</li>
-            <li>Cached images and related local files stored on your device to improve performance.</li>
-            <li>Technical information that platform providers or service providers may process automatically, such as IP address, device type, crash data, or diagnostics, when required to operate their services.</li>
+            <li><strong>Email address</strong> — only if you choose to subscribe to the optional newsletter. Your email is stored on your device and sent to our email provider (Mailchimp) so we can manage your subscription. You can unsubscribe at any time.</li>
+            <li><strong>On-device preferences and activity</strong> — such as selected theme, badge choices, archive/unlock state, bookmarks and saved cards, newsletter status, visit history, supporter/Pro status, and interaction counts. This is stored locally on your device.</li>
+            <li><strong>Anonymous reaction activity</strong> — when you react to a card, the card’s identifier and the chosen emoji are sent to our backend to update shared, aggregate reaction counts. No account, name, or personal identifier is attached.</li>
+            <li><strong>Content reports</strong> — if you report content, we receive details of the reported item (such as image URL, quote, author, and category) together with your device’s IP address, so we can review and moderate flagged content and prevent abuse.</li>
+            <li><strong>Purchase information</strong> — when you buy Pro or make an in-app purchase, the transaction is processed by the Apple App Store or Google Play and managed through our subscription provider (RevenueCat). We receive purchase and entitlement status (for example, whether Pro is active); we never receive or store your full payment card details.</li>
+            <li><strong>IP address</strong> — our backend automatically processes your IP address to apply rate limits and prevent abuse, and stores it with content reports for moderation.</li>
+            <li><strong>Cached images and local files</strong> — stored on your device to improve performance.</li>
           </ul>
         </section>
 
         <section class="policy-section">
           <h2>How information is used</h2>
           <ul>
-            <li>To provide the app’s core features, including daily batches, saved content, badges, archive access, and personalization.</li>
-            <li>To remember settings and restore your profile on the device.</li>
-            <li>To send optional notifications if you allow them.</li>
+            <li>To provide the app’s core features, including daily content, saved items, badges, archive access, and personalization.</li>
+            <li>To remember your settings and preferences on your device.</li>
+            <li>To deliver the optional newsletter if you subscribe.</li>
+            <li>To show aggregate community reaction counts.</li>
+            <li>To review reported content and keep the app safe.</li>
+            <li>To process and restore in-app purchases and your Pro subscription.</li>
+            <li>To show optional reminder notifications that you schedule on your device.</li>
             <li>To maintain, secure, diagnose, and improve the app.</li>
           </ul>
         </section>
 
         <section class="policy-section">
-          <h2>Local storage and optional backend services</h2>
-          <p>The current app is primarily local-first. Most profile-style information is stored on your device. If remote syncing, newsletter tools, or backend account support are enabled in a configured version of the app, your email address and related profile preferences may also be transmitted to Rare Puppers Co. service infrastructure so those features can function.</p>
+          <h2>Notifications</h2>
+          <p>If you enable reminders, Pawsitive Dose schedules <strong>local notifications</strong> on your device. The app does not collect a push token and does not send remote push notifications. You can turn notifications off at any time in your device settings.</p>
         </section>
 
         <section class="policy-section">
-          <h2>Payments and donations</h2>
-          <p>The current donation and Pro purchase flows in Pawsitive Dose are placeholder flows and do not process real payments directly. If app-store billing is added in a future version, payment handling will be provided by the relevant platform provider, and that provider’s terms and privacy practices will also apply.</p>
+          <h2>Local storage and backend services</h2>
+          <p>The app is local-first: most of your information stays on your device. A small backend, hosted on Vercel with storage provided by Upstash (Redis), powers a few online features: optional newsletter sign-up, community reaction counts, content reporting, and image delivery. Only the data described above is sent to that backend — the app does not maintain a user account or sync your personal profile to our servers.</p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Payments and subscriptions</h2>
+          <p>Pawsitive Dose offers in-app purchases, including an optional Pro subscription. Purchases are processed securely by the Apple App Store or Google Play and are managed through RevenueCat. Your payment card details are handled entirely by the app store and are never collected or stored by Rare Puppers Co. RevenueCat receives a pseudonymous app-user identifier and purchase/receipt data in order to manage your entitlements. The optional “Buy me a coffee” tip on our website is handled separately by Stripe — see “This website” below.</p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Third-party services</h2>
+          <p>To operate the app we rely on the following service providers, each of which handles data under its own privacy policy:</p>
+          <ul>
+            <li><strong>Apple App Store / Google Play</strong> — app distribution and in-app purchase billing.</li>
+            <li><strong>RevenueCat</strong> — in-app purchase and subscription management.</li>
+            <li><strong>Mailchimp (Intuit)</strong> — newsletter email delivery, only if you subscribe.</li>
+            <li><strong>Vercel</strong> — hosting for the app’s backend functions.</li>
+            <li><strong>Upstash (Redis)</strong> — storage of aggregate reaction counts, content reports, and short-lived rate-limiting records.</li>
+            <li><strong>Unsplash</strong> — source of some images, requested through our backend.</li>
+            <li><strong>Expo</strong> — the framework and local-notification tooling used to build the app.</li>
+          </ul>
         </section>
 
         <section class="policy-section">
@@ -310,27 +335,35 @@
 
         <section class="policy-section">
           <h2>Sharing and disclosure</h2>
-          <p>Rare Puppers Co. does not sell your personal information. Information may be shared only when needed to operate the app or comply with legal obligations, including with platform providers, hosting providers, push-notification services, analytics providers, or payment processors used to support app functionality.</p>
+          <p>Rare Puppers Co. does not sell your personal information and does not use it for advertising. The app contains no third-party advertising or cross-app tracking, and it does not access the device advertising identifier. Information is shared only with the service providers listed above so the app can function, or where required to comply with legal obligations, enforce our terms, or protect the rights and safety of users.</p>
         </section>
 
         <section class="policy-section">
           <h2>Retention and security</h2>
-          <p>Reasonable administrative, technical, and organizational measures are used to help protect information handled by the app. Information is retained only for as long as reasonably necessary to provide the app, comply with legal obligations, resolve disputes, or enforce agreements. Locally stored information remains on your device until you remove it, clear app storage, or uninstall the app.</p>
+          <p>Reasonable administrative, technical, and organizational measures are used to help protect information handled by the app. Specific retention periods include:</p>
+          <ul>
+            <li><strong>Newsletter email</strong> — retained by Mailchimp until you unsubscribe or request deletion.</li>
+            <li><strong>Reaction counts</strong> — stored as anonymous aggregates and automatically expire about one year after the last reaction to a given card.</li>
+            <li><strong>Content reports</strong> — only the most recent reports (currently up to 5,000) are kept for moderation; older reports roll off automatically.</li>
+            <li><strong>Rate-limiting records (including IP)</strong> — short-lived and expire within minutes.</li>
+            <li><strong>On-device data</strong> — remains on your device until you remove it, clear app storage, or uninstall the app.</li>
+          </ul>
         </section>
 
         <section class="policy-section">
           <h2>Your choices</h2>
           <ul>
-            <li>You can choose whether to provide an email address.</li>
+            <li>Providing an email address is optional — it is only used if you subscribe to the newsletter, and you can unsubscribe at any time from the app’s Settings screen.</li>
             <li>You can disable notifications in your device settings.</li>
             <li>You can clear cached files from inside the app.</li>
+            <li>You can manage or cancel your Pro subscription through your Apple App Store or Google Play account.</li>
             <li>You can remove locally stored app data by uninstalling the app or clearing app storage through your device settings.</li>
           </ul>
         </section>
 
         <section class="policy-section">
           <h2>Account and deletion requests</h2>
-          <p>If you use the app’s current local sign-in feature, your profile data is device-based. Signing out removes the active signed-in state, and clearing app storage or uninstalling the app removes locally stored profile data from your device. If future app versions use remote account storage, this page will be updated with the relevant deletion-request method and account-deletion instructions.</p>
+          <p>Pawsitive Dose does not require an account, and your in-app profile data is stored on your device. To remove your information: unsubscribe in Settings to delete your newsletter email from our provider, and clear app storage or uninstall the app to remove locally stored data. To request deletion of any data held by our backend (such as a newsletter email or information submitted in a content report), email <a href="mailto:rarepuppersco@gmail.com">rarepuppersco@gmail.com</a> and we will action your request.</p>
         </section>
 
         <section class="policy-section">
