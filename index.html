@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rare Puppers Co. — Apps & Games with Heart</title>
+<title>Rare Puppers Co. — Wholesome Apps & Games · Home of PawsitiveDose</title>
 <meta name="description" content="Rare Puppers Co. is an indie studio building wholesome apps and games. Home of PawsitiveDose — guided positivity, cute animals, Daily Pawtrait, widgets, and reflection prompts.">
 <meta name="theme-color" content="#FBF7F0">
 <link rel="canonical" href="https://rarepuppers.github.io/">
@@ -17,12 +17,12 @@
 <meta property="og:description" content="Indie studio building wholesome apps and games. Home of PawsitiveDose — guided positivity, cute animals, Daily Pawtrait, widgets, and reflection prompts.">
 <meta property="og:image" content="https://rarepuppers.github.io/feature-graphic-1024-500.png">
 <meta property="og:image:alt" content="PawsitiveDose feature graphic with wholesome animal photos and positive quote cards.">
-<meta property="og:url" content="https://rarepuppers.github.io">
+<meta property="og:url" content="https://rarepuppers.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rare Puppers Co.">
 
 <!-- Twitter/X card — controls the preview card when you share your URL on X -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@rarepuppers">
 <meta name="twitter:title" content="Rare Puppers Co. — Apps & Games with Heart">
 <meta name="twitter:description" content="Indie studio building wholesome apps and games. Home of PawsitiveDose — guided positivity, cute animals, Daily Pawtrait, widgets, and reflection prompts.">
@@ -46,6 +46,70 @@
     "https://x.com/rarepuppers",
     "https://reddit.com/user/rarepuppersco",
     "https://reddit.com/r/rarepuppers"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PawsitiveDose",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Android",
+  "description": "A free daily positivity app with curated animal photos, encouraging quote cards, mood check-ins, guided dose packs, a reviewed Daily Pawtrait, home-screen widgets, saved folders, and gentle reflection prompts.",
+  "image": "https://rarepuppers.github.io/feature-graphic-1024-500.png",
+  "screenshot": "https://rarepuppers.github.io/assets/screenshots/pawtrait.png",
+  "url": "https://play.google.com/store/apps/details?id=com.snackpackuniverse.pawsitivedose",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.snackpackuniverse.pawsitivedose",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rare Puppers Co.",
+    "url": "https://rarepuppers.github.io/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is PawsitiveDose free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. PawsitiveDose is free to download on Google Play. Optional premium features are available for users who want more daily cards, extra archive history, and supporter perks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What platforms is PawsitiveDose available on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PawsitiveDose is available now on Android via Google Play. An iOS version is in progress."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does PawsitiveDose do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It delivers a gentle daily mood boost: curated animal photos, encouraging quote cards, mood check-ins, guided dose packs, themed series, a reviewed Daily Pawtrait, home-screen widget modes, saved folders, and reflection prompts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who makes PawsitiveDose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PawsitiveDose is built by Rare Puppers Co., a one-person indie studio creating wholesome apps and games."
+      }
+    }
   ]
 }
 </script>
@@ -548,6 +612,79 @@
     background: var(--teal); flex-shrink: 0;
   }
 
+  /* ── APP INTRO (SEO/marketing prose) ── */
+  .app-intro {
+    max-width: 760px;
+    margin: 40px auto 0;
+  }
+
+  .app-intro-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+
+  .app-intro p {
+    font-size: 16px;
+    color: var(--ink2);
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+  .app-intro p:last-child { margin-bottom: 0; }
+
+  /* ── FAQ ── */
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+
+  .faq-item {
+    background: var(--cream);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 4px 20px;
+    box-shadow: 0 10px 26px rgba(28,24,20,0.04);
+    transition: border-color 0.15s;
+  }
+  .faq-item[open] { border-color: rgba(29,158,117,0.4); }
+
+  .faq-item summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 16px 0;
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-family: var(--sans);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--teal);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item summary:focus-visible {
+    outline: 3px solid rgba(29, 158, 117, 0.28);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .faq-item p {
+    font-size: 15px;
+    color: var(--ink2);
+    line-height: 1.7;
+    padding: 0 0 18px;
+    margin: 0;
+  }
+
   /* ── CONTACT ── */
   #contact { background: var(--cream); text-align: center; }
   #contact .section-title, #contact .section-body { margin-left: auto; margin-right: auto; }
@@ -791,7 +928,11 @@
   <h1>Apps & games built<br>with <em>heart</em></h1>
   <p class="hero-sub">Wholesome, fun experiences for humans and animal lovers. One line of code at a time.</p>
   <div class="hero-btns">
-    <a href="#projects" class="btn-primary">See our projects →</a>
+    <a href="https://play.google.com/store/apps/details?id=com.snackpackuniverse.pawsitivedose" target="_blank" rel="noopener noreferrer" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.05a1.5 1.5 0 0 0-.6 1.2v17.5a1.5 1.5 0 0 0 .6 1.2l9.9-9.95-9.9-9.95zm12 5.85L5.9 2.4l9.4 5.5 2.2 2.2-1.9 1.9zm4.9 2.85-2.4-1.4-2.5 2.5 2.5 2.5 2.4-1.4a1.4 1.4 0 0 0 0-2.2zM5.9 21.6l9.7-5.5-1.9-1.9-2.2 2.2-5.6 5.2z"/></svg>
+      Get it on Google Play
+    </a>
+    <a href="#projects" class="btn-outline">See our projects →</a>
     <a href="https://github.com/Rarepuppers/pawse" target="_blank" rel="noopener noreferrer" class="btn-outline">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
       GitHub
@@ -839,9 +980,15 @@
           <span class="tag tag-amber">Android</span>
         </div>
 
-        <a href="https://github.com/Rarepuppers/pawse" target="_blank" rel="noopener noreferrer" class="btn-outline" style="font-size: 13px; padding: 10px 20px;">
-          View on GitHub →
-        </a>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <a href="https://play.google.com/store/apps/details?id=com.snackpackuniverse.pawsitivedose" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 13px; padding: 10px 20px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.05a1.5 1.5 0 0 0-.6 1.2v17.5a1.5 1.5 0 0 0 .6 1.2l9.9-9.95-9.9-9.95zm12 5.85L5.9 2.4l9.4 5.5 2.2 2.2-1.9 1.9zm4.9 2.85-2.4-1.4-2.5 2.5 2.5 2.5 2.4-1.4a1.4 1.4 0 0 0 0-2.2zM5.9 21.6l9.7-5.5-1.9-1.9-2.2 2.2-5.6 5.2z"/></svg>
+            Get it on Google Play
+          </a>
+          <a href="https://github.com/Rarepuppers/pawse" target="_blank" rel="noopener noreferrer" class="btn-outline" style="font-size: 13px; padding: 10px 20px;">
+            View on GitHub →
+          </a>
+        </div>
 
         <div class="tech-stack">
           <span class="tech-pill">React Native</span>
@@ -854,16 +1001,26 @@
       <div class="project-visual">
         <div class="screens-showcase" aria-label="PawsitiveDose app screenshots">
           <div class="screen-card screen-left">
-            <img src="Screenshot_archive.png" alt="PawsitiveDose archive screen showing saved animal quote cards." loading="lazy">
+            <img src="assets/screenshots/archive.png" alt="PawsitiveDose archive screen showing saved animal quote cards for hedgehogs and bunnies." loading="lazy">
           </div>
           <div class="screen-card screen-right">
-            <img src="Screenshot_settings.png" alt="PawsitiveDose settings screen showing support and badge options." loading="lazy">
+            <img src="assets/screenshots/settings2.png" alt="PawsitiveDose settings screen showing appearance themes and plan options." loading="lazy">
           </div>
           <div class="screen-card screen-main">
-            <img src="Screenshot_today.png" alt="PawsitiveDose today screen with a featured animal image and reaction buttons." loading="lazy">
+            <img src="assets/screenshots/pawtrait.png" alt="PawsitiveDose Daily Pawtrait screen featuring a tabby kitten image of the day." loading="lazy">
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="app-intro reveal">
+      <h3 class="app-intro-title">About Pawsitive Dose</h3>
+      <p>
+        Pawsitive Dose is a free Android app built to give you a small, genuine lift whenever your day needs one. Instead of an endless social feed or doomscrolling, it offers a calm, curated stream of adorable animal photos paired with encouraging quotes, affirmations, and mindful imagery. Open it for a quick emotional reset: check in with your mood, work through a guided dose pack, or simply enjoy the reviewed Daily Pawtrait — one hand-picked animal moment, refreshed every calendar day.
+      </p>
+      <p>
+        Save the cards that resonate into your own folders, revisit them in the archive, and keep your streak going with gentle daily reminders. Home-screen widget modes bring the good vibes straight to your phone without ever opening the app, while themed series and animal preferences let you shape the experience around the creatures you love most. Pawsitive Dose is free to download, with optional premium features for people who want more daily cards, deeper archive history, and supporter perks. It's wholesome positivity designed to fit into a few quiet seconds of your day — no pressure, no noise, just a little more joy.
+      </p>
     </div>
   </div>
 </section>
@@ -1006,6 +1163,36 @@
     </div>
   </div>
 </div>
+<!-- FAQ -->
+<section id="faq" style="background: var(--cream2);">
+  <div style="max-width: 760px; margin: 0 auto;">
+    <p class="section-eyebrow reveal" style="text-align:center;">Good to know</p>
+    <h2 class="section-title reveal" style="text-align:center;">Frequently asked questions</h2>
+    <p class="section-body reveal" style="text-align:center; margin: 0 auto 36px;">
+      A few quick answers about PawsitiveDose.
+    </p>
+
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>Is PawsitiveDose free?</summary>
+        <p>Yes. PawsitiveDose is free to download on Google Play. Optional premium features are available for users who want more daily cards, extra archive history, and supporter perks.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What platforms is PawsitiveDose available on?</summary>
+        <p>It's available now on Android via Google Play. An iOS version is in progress.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What does PawsitiveDose do?</summary>
+        <p>It delivers a gentle daily mood boost: curated animal photos, encouraging quote cards, mood check-ins, guided dose packs, themed series, a reviewed Daily Pawtrait, home-screen widget modes, saved folders, and reflection prompts.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Who makes PawsitiveDose?</summary>
+        <p>PawsitiveDose is built by Rare Puppers Co., a one-person indie studio creating wholesome apps and games.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <p class="section-eyebrow reveal" style="text-align:center;">Get in touch</p>
@@ -1064,6 +1251,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#upcoming">Upcoming</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="/privacy/">Privacy Policy</a></li>
     <li><a href="https://github.com/Rarepuppers/pawse" target="_blank" rel="noopener noreferrer">pawse</a></li>
     <li><a href="https://github.com/Rarepuppers/slay-the-gray" target="_blank" rel="noopener noreferrer">slay-the-gray</a></li>
