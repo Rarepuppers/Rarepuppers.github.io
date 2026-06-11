@@ -1,0 +1,15 @@
+# Rare Puppers Co.
+
+> Rare Puppers Co. is an indie studio building wholesome apps and games — a SnackPack Studios project within the SnackPack Universe. Its first release is PawsitiveDose, a free daily positivity app for Android with curated animal photos, encouraging quote cards, mood check-ins, a reviewed Daily Pawtrait, home-screen widgets, saved folders, and gentle reflection prompts. No endless feed, no third-party ads.
+
+Key facts: PawsitiveDose is free on Google Play (Play Store ID: com.snackpackuniverse.pawsitivedose) with optional Pro features. The studio is part of the SnackPack Universe (snackpackuniverse.com). Contact: support@snackpackuniverse.com.
+
+## Pages
+
+- [Home](https://rarepuppers.github.io/): Studio overview, PawsitiveDose feature tour, upcoming projects, and FAQ.
+- [Privacy policy](https://rarepuppers.github.io/privacy/): PawsitiveDose privacy policy.
+
+## Related
+
+- [PawsitiveDose on Google Play](https://play.google.com/store/apps/details?id=com.snackpackuniverse.pawsitivedose)
+- [SnackPack Universe](https://www.snackpackuniverse.com/): The wider family of calm, ad-free learning and games apps.
